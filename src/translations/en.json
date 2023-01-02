@@ -1,4 +1,15 @@
 {
+    "home-header": {
+        "specialty": "Medical specialty",
+        "find-doctor": "Find a doctor by specialty",
+        "facilities": "Health facilities",
+        "choose-hospital": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "choose-doctor": "Choose a good doctor",
+        "package": "Checkup package",
+        "health-check": "General health check",
+        "support": "Support"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
@@ -31,8 +42,7 @@
             "system-administrator": {
                 "header": "System Administrator",
                 "user-manage": "User manage",
-                "product-manage": "Package manage",
-                "register-package-group-or-account": "Register service package for group/account"
+                "user-redux": "Manage user using redux"
             },
             "system-parameter": {
                 "header": "System-parameter"

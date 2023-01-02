@@ -1,0 +1,164 @@
+.home-header {
+    height: 78px;
+    display: flex;
+    padding: 0 54px;
+    align-items: center;
+
+    .header__menu-logo {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .header__menu-icon {
+            color: #969495;
+            font-size: 25px;
+        }
+
+        .header__logo {
+            background: url('../../assets/logo.svg') center center no-repeat;
+            width: 150px;
+            height: 100%;
+            margin-left: 20px;
+        }
+    }
+
+    .header__list {
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+
+        .header__list-item {
+            .header__list-item-title {
+                font-size: 12px;
+                font-weight: 600;
+                color: #333;
+                text-decoration: none;
+            }
+            .header__list-item-des {
+                font-size: 10px;
+                font-weight: 200;
+            }
+        }
+    }
+
+    .header__option {
+        display: flex;
+        width: 20%;
+        justify-content: flex-end;
+        gap: 10px;
+
+        .header__option-support {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #969495;
+            font-weight: 600;
+
+            i {
+                color: #45c3d2;
+            }
+        }
+    }
+}
+
+.header__search {
+    background-image: url(../../assets/search-background.jpg),
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .header__search-title {
+        text-align: center;
+        padding-top: 60px;
+        font-size: 32px;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 1px #333;
+        text-transform: uppercase;
+    }
+
+    .header__search-box {
+        width: 300px;
+        height: 50px;
+        padding: 8px;
+        margin: 20px auto 0 auto;
+        background-color: #f7d800;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+
+        i {
+            color: #000;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        input {
+            background-color: transparent;
+            margin-left: 20px;
+            border: none;
+            outline: none;
+            color: #333;
+        }
+    }
+
+    .header__search-option-list {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .header__search-option-list-item {
+            width: 157px;
+            padding: 12px 12px;
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+
+            .header__search-option-list-item-image {
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                background-size: 27px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                box-shadow: 2px 2px 5px #999;
+                border-radius: 50%;
+
+                &.image-1 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133537-khamchuyenkhoa.png');
+                }
+                &.image-2 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133657-khamtuxa.png');
+                }
+                &.image-3 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133744-khamtongquat.png');
+                }
+                &.image-4 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133744-dichvuxetnghiem.png');
+                }
+                &.image-5 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133744-suckhoetinhthan.png');
+                }
+                &.image-6 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2022/05/19/104635-khamnhakhoa.png');
+                }
+                &.image-7 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2022/05/16/151930-phau-thuat.jpg');
+                }
+                &.image-8 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2021/12/08/133744-khamtainha.png');
+                }
+                &.image-9 {
+                    background-image: url('https://cdn.bookingcare.vn/fo/2022/07/29/101157-icon-lich-su.jpg');
+                }
+            }
+        }
+    }
+}

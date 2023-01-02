@@ -1,4 +1,15 @@
 {
+    "home-header": {
+        "specialty": "Chuyên khoa",
+        "find-doctor": "Tìm bác sĩ theo chuyên khoa",
+        "facilities": "Cơ sở y tế",
+        "choose-hospital": "Chọn bệnh viện, phòng khám",
+        "doctor": "Bác sĩ",
+        "choose-doctor": "Chọn bác sĩ giỏi",
+        "package": "Gói khám",
+        "health-check": "Khám sức khỏe tổng quát",
+        "support": "Hỗ trợ"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
@@ -31,8 +42,7 @@
             "system-administrator": {
                 "header": "Quản trị hệ thống",
                 "user-manage": "Quản lý người sử dụng",
-                "product-manage": "Quản lý gói",
-                "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
+                "user-redux": "Quản lý User dùng Redux"
             },
             "system-parameter": {
                 "header": "Tham số hệ thống"

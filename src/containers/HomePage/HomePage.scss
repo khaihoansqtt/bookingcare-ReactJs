@@ -1,0 +1,85 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+.home__section-container {
+    padding: 24px 70px;
+
+    &.specialty-section {
+        background-color: #f5f5f5;
+    }
+
+    &.outStandingDoctor-section {
+        background-color: #f5f5f5;
+    }
+
+    .home__section-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+        span {
+            font-weight: 600;
+            font-size: 24px;
+        }
+        button {
+            border: none;
+            padding: 0 8px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+    .home__section-body {
+        .slick-prev {
+            width: 48px;
+            height: 46px;
+            left: -40px;
+            z-index: 1;
+
+            &::before {
+                color: #999;
+                font-size: 36px;
+            }
+        }
+
+        .slick-next {
+            width: 48px;
+            height: 46px;
+            right: -40px;
+
+            &::before {
+                color: #999;
+                font-size: 36px;
+            }
+        }
+
+        .section-img {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .section-title {
+            padding: 0 8px;
+            font-size: 13px;
+        }
+
+        .section-title2 {
+            padding: 0 8px;
+            font-size: 12px;
+            font-weight: 200;
+        }
+
+        .out-standing-doctor-content {
+            padding: 0 8px;
+            .out-standing-doctor-border {
+                border: 1px solid #999;
+                padding: 8px 0;
+                text-align: center;
+            }
+            .section-img {
+                border-radius: 50%;
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}
