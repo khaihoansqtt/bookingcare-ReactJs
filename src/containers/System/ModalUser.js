@@ -38,7 +38,7 @@ class ModalUser extends Component {
             try {
                 const response = await createNewUserInDb(data)
                 this.props.reRenderAllUser()
-                if (response.errCode != 0) alert(response.errMessage)
+                if (response.errCode !== 0) alert(response.errMessage)
                 else {
                     this.toggle()
                     this.setState({

@@ -14,27 +14,27 @@ class Facility extends Component {
                 <div className="home__section-body">
                     <Slider {...this.props.settings}>
                         <div>
-                            <img className="section-img" src={facility} />
+                            <img className="section-img" src={facility} alt="benh vien" />
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                         <div>
-                            <img className="section-img" src={facility} />{' '}
+                            <img className="section-img" src={facility} alt="benh vien" />{' '}
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                         <div>
-                            <img className="section-img" src={facility} />{' '}
+                            <img className="section-img" src={facility} alt="benh vien" />{' '}
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                         <div>
-                            <img className="section-img" src={facility} />{' '}
+                            <img className="section-img" src={facility} alt="benh vien" />{' '}
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                         <div>
-                            <img className="section-img" src={facility} />{' '}
+                            <img className="section-img" src={facility} alt="benh vien" />{' '}
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                         <div>
-                            <img className="section-img" src={facility} />{' '}
+                            <img className="section-img" src={facility} alt="benh vien" />{' '}
                             <div className="section-title">Bệnh viện hữu nghị Việt Đức</div>
                         </div>
                     </Slider>

@@ -70,15 +70,24 @@
 
         .out-standing-doctor-content {
             padding: 0 8px;
+
             .out-standing-doctor-border {
                 border: 1px solid #999;
                 padding: 8px 0;
                 text-align: center;
+                height: 240px;
+
+                .custom-image {
+                    width: 120px;
+                    height: 120px;
+                    margin: auto;
+                }
             }
             .section-img {
+                width: 100%;
+                height: 100%;
                 border-radius: 50%;
-                width: 80%;
-                margin: auto;
+                object-fit: cover;
             }
         }
     }

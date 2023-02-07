@@ -1,83 +1,42 @@
 import React, { Component } from 'react'
+import 'react-markdown-editor-lite/lib/index.css'
 import { connect } from 'react-redux'
 
-import { userServices } from '../../services'
-import ModalEditUser from './ModalEditUser'
-import ModalUser from './ModalUser'
+import * as actions from '../../../store/actions'
 
-import './UserManage.scss'
-class UserManage extends Component {
+import './UserTable.scss'
+
+class UserTable extends Component {
     constructor(props) {
         super(props)
         this.state = {
             allUsers: [],
-            isOpenModalUser: false,
-            isOpenModalEditUser: false,
-            editUser: {},
         }
     }
 
-    async componentDidMount() {
-        this.reRenderAllUser()
+    componentDidMount() {
+        this.props.getAllUsers()
     }
 
-    reRenderAllUser = async () => {
-        const data = await userServices.getAllUsers('ALL')
-        this.setState({
-            allUsers: data.user,
-        })
-    }
-
-    handleAddNewUser = () => {
-        this.setState({
-            isOpenModalUser: true,
-        })
-    }
-
-    toggleModalUser = () => {
-        this.setState({
-            isOpenModalUser: false,
-        })
+    componentDidUpdate(prevProps) {
+        if (prevProps.allUsers !== this.props.allUsers) {
+            this.setState({
+                allUsers: this.props.allUsers,
+            })
+        }
     }
 
     handleEditUser = (user) => {
-        this.setState({
-            isOpenModalEditUser: true,
-            editUser: user,
-        })
+        this.props.handleEditUserFromParent(user)
     }
 
-    toggleModalEditUser = () => {
-        this.setState({
-            isOpenModalEditUser: false,
-        })
-    }
-
-    handleDeleteUser = async (id) => {
-        await userServices.deleteUser(id)
-        await this.reRenderAllUser()
+    handleDeleteUser = (id) => {
+        this.props.deleteUser(id)
     }
 
     render() {
         return (
             <React.Fragment>
-                <ModalUser
-                    isOpen={this.state.isOpenModalUser}
-                    toggleFromParent={this.toggleModalUser}
-                    reRenderAllUser={this.reRenderAllUser}
-                />
-                {this.state.isOpenModalEditUser && (
-                    <ModalEditUser
-                        isOpen={this.state.isOpenModalEditUser}
-                        toggleFromParent={this.toggleModalEditUser}
-                        reRenderAllUser={this.reRenderAllUser}
-                        currentUser={this.state.editUser}
-                    />
-                )}
-                <div className="title">MANAGE USER</div>
-                <button className="btn-primary mb-2" onClick={this.handleAddNewUser}>
-                    Add New User
-                </button>
                 <table className="table table-striped table-hover">
                     <thead>
                         <tr className="table-danger">
@@ -115,11 +74,17 @@ class UserManage extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {}
+    return {
+        language: state.app.language,
+        allUsers: state.admin.allUsers,
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {}
+    return {
+        getAllUsers: () => dispatch(actions.fetchAllUsers()),
+        deleteUser: (id) => dispatch(actions.deleteUser(id)),
+    }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserManage)
+export default connect(mapStateToProps, mapDispatchToProps)(UserTable)

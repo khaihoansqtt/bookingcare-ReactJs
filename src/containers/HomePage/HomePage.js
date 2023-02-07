@@ -11,11 +11,11 @@ import OutStandingDoctor from './Section/OutStandingDoctor'
 
 class HomePage extends Component {
     render() {
-        let settings = { dots: false, infinite: true, speed: 500, slidesToShow: 4, slidesToScroll: 1 }
+        let settings = { dots: false, infinite: false, speed: 500, slidesToShow: 4, slidesToScroll: 1 }
 
         return (
             <div className="home-page">
-                <HomeHeader />
+                <HomeHeader isShowBanner />
                 <Specialty settings={settings} />
                 <Facility settings={settings} />
                 <OutStandingDoctor settings={settings} />

@@ -5,6 +5,7 @@ import * as actions from '../../store/actions'
 import Navigator from '../../components/Navigator'
 import { adminMenu } from './menuApp'
 import './Header.scss'
+import { FormattedMessage } from 'react-intl'
 
 class Header extends Component {
     handleChangeLanguage = (language) => {
@@ -12,25 +13,28 @@ class Header extends Component {
     }
 
     render() {
-        const { processLogout } = this.props
-        console.log(this.props.language)
+        const { processLogout, language, userInfo } = this.props
         return (
             <div className="header-container">
                 {/* thanh navigator */}
-                <div className="header-tabs-container">
+                <div className="header-menus-container">
                     <Navigator menus={adminMenu} />
                 </div>
 
                 {/* nút logout */}
-                <div className="logout-container">
+                <div className="header-personal">
+                    <span className="header-welcome">
+                        <FormattedMessage id="home-header.welcome" />
+                        {userInfo && userInfo.firstName ? userInfo.firstName : ''}
+                    </span>
                     <span
-                        className={this.props.language === 'vi' ? 'language-vi active' : 'language-vi'}
+                        className={language === 'vi' ? 'language-vi active' : 'language-vi'}
                         onClick={() => this.handleChangeLanguage('vi')}
                     >
                         VN
                     </span>
                     <span
-                        className={this.props.language === 'en' ? 'language-en active' : 'language-en'}
+                        className={language === 'en' ? 'language-en active' : 'language-en'}
                         onClick={() => this.handleChangeLanguage('en')}
                     >
                         EN
@@ -48,6 +52,7 @@ const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
+        userInfo: state.user.userInfo,
     }
 }
 

@@ -41,7 +41,6 @@ class Login extends Component {
         try {
             const data = await userServices.handleLoginApi(this.state.email, this.state.password)
             if (data.errCode === 0) {
-                console.log('login success')
                 this.props.userLoginSuccess(data.user)
             } else
                 this.setState({
@@ -94,10 +93,10 @@ class Login extends Component {
                     </div>
                     <div className="login-other-method">
                         <div className="login-other-method__text">Or sign in with</div>
-                        <a className="login-other-method__link login-other-method__link--google" href="">
+                        <a className="login-other-method__link login-other-method__link--google" href="/">
                             <i className="fab fa-google-plus-g"></i>
                         </a>
-                        <a className="login-other-method__link login-other-method__link--facebook" href="">
+                        <a className="login-other-method__link login-other-method__link--facebook" href="/">
                             <i className="fab fa-facebook-f"></i>
                         </a>
                     </div>

@@ -1,8 +1,8 @@
-import actionTypes from '../actions/actionTypes';
+import actionTypes from '../actions/actionTypes'
 
 const initialState = {
     isLoggedIn: false,
-    userInfo: null
+    userInfo: null,
 }
 
 const userReducer = (state = initialState, action) => {
@@ -11,23 +11,23 @@ const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoggedIn: true,
-                userInfo: action.payload
+                userInfo: action.payload,
             }
         case actionTypes.USER_LOGIN_FAIL:
             return {
                 ...state,
                 isLoggedIn: false,
-                userInfo: null
+                userInfo: null,
             }
         case actionTypes.PROCESS_LOGOUT:
             return {
                 ...state,
                 isLoggedIn: false,
-                userInfo: null
+                userInfo: null,
             }
         default:
-            return state;
+            return state
     }
 }
 
-export default userReducer;
+export default userReducer

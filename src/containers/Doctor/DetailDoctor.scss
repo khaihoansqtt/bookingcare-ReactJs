@@ -1,0 +1,28 @@
+.detail-doctor-container {
+    padding: 12px 60px;
+}
+
+.doctor-overview {
+    display: flex;
+    width: var(--container-width);
+    // align-items: center;
+    .doctor-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex-shrink: 0;
+    }
+    .doctor-info {
+        padding: 0 24px;
+        .doctor-info-header {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .doctor-info-description {
+        }
+    }
+}

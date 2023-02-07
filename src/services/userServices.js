@@ -19,3 +19,22 @@ export function deleteUser(id) {
 export function editUserInDb(user) {
     return axios.put('/api/edit-user', user)
 }
+
+export function getAllcode(type) {
+    return axios.get(`api/allcode?type=${type}`)
+}
+
+export function getTopDoctors(limit) {
+    return axios.get(`api/top-doctor-home?limit=${limit}`)
+}
+export function getAllDoctors() {
+    return axios.get(`api/get-all-doctors`)
+}
+
+export function postDetailDoctor(body) {
+    return axios.post('/api/post-detail-doctor', body)
+}
+
+export function getDetailDoctor(doctorId) {
+    return axios.get(`/api/get-detail-doctor-by-id?doctorId=${doctorId}`)
+}
